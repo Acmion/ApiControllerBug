@@ -1,0 +1,19 @@
+﻿@page
+
+<h1>ApiControllerEmptyValueBug</h1>
+
+<p>
+    Find out the type of an empty parameter. Won't work.
+</p>
+<form method="post" action="/api/some/">
+    <input type="hidden" name="parameter" value="" />
+    <input type="submit" value="Submit" />
+</form>
+
+<p>
+    Extract the parameter from Request.Form. Will work.
+</p>
+<form method="post" action="/api/someother/">
+    <input type="hidden" name="parameter" value="" />
+    <input type="submit" value="Submit" />
+</form>
